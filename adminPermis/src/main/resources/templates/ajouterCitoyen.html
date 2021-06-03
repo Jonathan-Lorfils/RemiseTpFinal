@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ajouter un citoyen</title>
+    <th:block th:include="layout/header"></th:block>
+</head>
+<body>
+
+<div class="container">
+    <form class="form-horizontal" action="" method="post" th:object="${citoyen1}" th:action="@{/saveCitoyen}">
+
+        <label for="numeroAssuranceSocial" class="form-label">Numero assurance Social</label>
+        <input type="text" class="form-control" id="numeroAssuranceSocial" th:field="${citoyen1.numeroAssuranceSocial}">
+        <br>
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" th:field="${citoyen1.nom}">
+        <br>
+        <label for="prenom" class="form-label">Prenom</label>
+        <input type="text" class="form-control" id="prenom" th:field="${citoyen1.prenom}">
+        <br>
+        <label for="age" class="form-label">Age</label>
+        <input type="text" class="form-control" id="age" th:field="${citoyen1.age}">
+        <br>
+        <label for="motDePasse" class="form-label">Mot de passe</label>
+        <input type="text" class="form-control" id="motDePasse" th:field="${citoyen1.motDePasse}">
+        <br>
+        <label for="typePermis" class="form-label">Type de permis</label>
+        <input type="text" class="form-control" id="typePermis" th:field="${citoyen1.typePermis}">
+        <br>
+        <button class="btn btn-primary" type="submit">Ajouter</button>
+    </form>
+</div>
+</body>
+</html>

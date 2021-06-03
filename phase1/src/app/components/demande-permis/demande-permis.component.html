@@ -1,0 +1,75 @@
+
+
+  <div class="form-row shadow">
+      <div class="col">
+
+        <div *ngIf="validMessage != ''">
+          <h3 class="has-info">{{validMessage}}</h3>
+          </div>
+
+        <h1>Demande de permis</h1>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="formulaireAdulte-tab" data-toggle="pill" href="#formulaireAdulte" role="tab" aria-controls="formulaireAdulte" aria-selected="true">Adulte</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="formulaireEnfant-tab" data-toggle="pill" href="#formulaireEnfant" role="tab" aria-controls="formulaireEnfant" aria-selected="false">Enfant</a>
+          </li>
+        </ul>
+      </div>
+
+    <div class="col">
+
+        <div class="tab-content" id="pills-tabContent">
+
+          
+
+          <div class="tab-pane fade show active" id="formulaireAdulte" role="tabpanel" aria-labelledby="formulaireAdulte-tab">
+            <form [formGroup]="demandePermisAdulteForm" (ngSubmit)="onSubmitAdulteForm()" >
+            <div class="form-group">
+              <label for="nassm">Numero Assurance Maladie</label>
+              <input type="text" class="form-control" id="nassm" formControlName="nassm" placeholder="Enter nassm">
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleInputEmail1">Courriel</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" formControlName="courriel" aria-describedby="emailHelp" placeholder="Entrer une adresse courriel">
+                <small id="emailHelp" class="form-text text-muted">Votre email restera privée</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+
+          <div class="tab-pane fade" id="formulaireEnfant" role="tabpanel" aria-labelledby="formulaireEnfant-tab">
+            <form [formGroup]="demandePermisEnfantForm" (ngSubmit)="onSubmitEnfantForm()" >
+              <div class="form-group">
+                <label for="nassmEnfant">Numero Assurance Maladie Enfant</label>
+                <input type="text" class="form-control" id="nassmEnfant" formControlName="nassmEnfant" placeholder="Entrer nassm de votre enfant">
+              </div>
+
+              <div class="form-group">
+                <label for="nassmParent">Numero Assurance Maladie Parent</label>
+                <input type="text" class="form-control" id="nassmParent" formControlName="nassmParent" placeholder="Entrer nassm du Parent">
+              </div>
+      
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Courriel</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" formControlName="courriel" aria-describedby="emailHelp" placeholder="Entrer une adresse courriel">
+                  <small id="emailHelp" class="form-text text-muted">Votre email restera privée</small>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+
+
+        </div>
+
+    </div>  
+
+  </div>
+
+  
+

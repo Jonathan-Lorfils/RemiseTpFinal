@@ -1,0 +1,41 @@
+<form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe() " >
+    <div *ngIf="validMessage != ''">
+        <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+
+    <h3>Inscription</h3>
+
+    <div class="mb-3">
+        <label for="prenom" class="form-label">Prenom</label>
+        <input type="prenom" class="form-control" id="prenom" formControlName="prenom">
+    </div>
+    <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="nom" class="form-control" id="nom" formControlName="nom">
+    </div>
+    <div class="mb-3">
+        <label for="courriel" class="form-label">Courriel</label>
+        <input type="courriel" class="form-control" id="courriel" placeholder="{{courriel}}" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="motDePasse" class="form-label">Mot de passe</label>
+        <input type="motDePasse" class="form-control" id="motDePasse" formControlName="motDePasse">
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="text" class="form-control" id="age" formControlName="age">
+    </div>
+    <div class="mb-3">
+        <label for="nassm" class="form-label">Nassm</label>
+        <input type="text" class="form-control" id="numeroAssuranceSocial" placeholder="{{nassm}}" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="typePermis" class="form-label">Permis</label>
+        <input type="text" class="form-control" id="typePermis" formControlName="typePermis">
+    </div>
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </div>
+</form>

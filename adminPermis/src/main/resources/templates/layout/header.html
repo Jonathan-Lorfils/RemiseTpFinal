@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" rel="stylesheet" media="screen">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:fragment="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+                </div>
+                    <ul class="nav navbar-nav" >
+                        <li><a th:href="@{/citoyens}">Liste de citoyens</a></li>
+                        <li><a th:href="@{/ajouterCitoyen}">Ajouter citoyen</a></li>
+                        <li><a th:href="@{/permis}">Liste de permis</a></li>
+                    </ul>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="row text-center">
+                <div class="row">
+                    <h2>Permis Sante Admin</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

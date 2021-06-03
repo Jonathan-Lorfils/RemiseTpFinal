@@ -1,0 +1,25 @@
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    
+    <div class="form-row">
+
+      
+        
+        <div class="col">
+            <div *ngIf="validMessage != ''">
+                <h3 class="has-info">{{validMessage}}</h3>
+            </div>
+            
+            <h1>Login</h1>
+        </div>
+
+        <div class="col">
+            <label for="courriel" class="form-label">Courriel</label>
+            <input type="email" class="form-control" id="courriel" formControlName="courriel">
+       
+            <label for="motDePasse" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="motDePasse" formControlName="motDePasse">
+        
+            <button type="submit" class="btn btn-primary mb-3">Connexion</button>
+        </div>
+    </div>
+</form>

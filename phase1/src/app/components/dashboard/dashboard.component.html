@@ -1,0 +1,41 @@
+
+
+<section>
+        <h1>Bonjour : {{citizen.prenom}} {{citizen.nom}}</h1>
+    
+        <div *ngIf="validMessage != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+        </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Id: {{citizen.id}}</h4>
+                <br>
+                <h4>Nassm: {{citizen.numeroAssuranceSocial}} </h4>
+                <br>
+                <h4>Age: {{citizen.age}}</h4>
+            </div>
+
+            <div class="col">
+                <h4>Email:  {{citizen.courriel}} </h4>
+                <br>
+                <h4>Type de permis: {{citizen.typePermis}}</h4>
+                <br>
+                <div>
+                    <h4>Votre code qr :</h4>
+                    <img src="http://localhost:2021/permisSante/qrCode/{{citizen.numeroAssuranceSocial}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="text-center">
+        <button class="btn btn-primary" [routerLink]="['/home']">Ajouter un enfant</button>
+        <button class="btn btn-primary" (click)="renouvellerPermis()">Renouveller votre permis</button>
+        <button class="btn btn-danger" [routerLink]="['/logout']">Déconnection </button>
+    </div>
+    
+    
+</section>
+

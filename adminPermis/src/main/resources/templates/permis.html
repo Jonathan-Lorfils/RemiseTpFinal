@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Liste des Permis</title>
+    <th:block th:include="layout/header"></th:block>
+</head>
+<body>
+
+<div class="container">
+    <div th:if="${not #lists.isEmpty(listePermis)}" >
+        <h2>Liste de tous les Permis</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id Permis</th>
+                <th>Type de Permis</th>
+                <th>Date de creation</th>
+                <th>Date d'expiration</th>
+                <th>Supprimer</th>
+            </tr>
+            <tr th:each="permis : ${listePermis}">
+                <td th:text="${permis.idPermis}">Id</td>
+                <td th:text="${permis.typePermis}">Type de Permis</td>
+                <td th:text="${permis.datePermisTest}">Date de creation</td>
+                <td th:text="${permis.expirationPermisTest}">Date d'expiration</td>
+                <td><a th:href="${'/permis/supprimer/' + permis.idPermis}" class="btn btn-info">Supprimer</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

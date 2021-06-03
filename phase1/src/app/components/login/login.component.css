@@ -1,0 +1,21 @@
+.form-row{
+    width: 100%;
+    background-color: white;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 10%;
+    box-shadow: black;
+}
+h1{
+    text-align: center;
+}
+label,input {
+    margin-top: 5px;
+}
+button {
+    margin-top: 5%;
+}
